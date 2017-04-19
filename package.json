@@ -1,1 +1,40 @@
-{     "devDependencies": {         "node-mandrill": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-node-mandrill",     "homepage": "https://github.com/npmtest/node-npmtest-node-mandrill",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-node-mandrill.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [node-mandrill (v1.0.1)](http://github.com/jimrubenstein/node-mandrill.git)  [![npm package](https://img.shields.io/npm/v/npmtest-node-mandrill.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-node-mandrill) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-node-mandrill.svg)](https://travis-ci.org/npmtest/node-npmtest-node-mandrill)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "node-mandrill": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-node-mandrill",
+    "keywords": [
+        "coverage",
+        "test",
+        "node-mandrill"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_node_mandrill.js",
+    "name": "npmtest-node-mandrill",
+    "nameAlias": "npmtest_node_mandrill",
+    "nameOriginal": "npmtest-node-mandrill",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-node-mandrill.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
