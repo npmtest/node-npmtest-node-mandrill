@@ -81,7 +81,8 @@
         "type": "git",
         "url": "git+ssh://git@github.com/jimrubenstein/node-mandrill.git"
     },
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "bin": {}
 }
 ```
 
